@@ -25,7 +25,8 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          // DEFAULT: "hsl(var(--primary))"
+          DEFAULT: '#80c679',
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -52,6 +53,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'main-black': '#2D2E32',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,10 +69,19 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+				'image-flow': {
+					'0%, 100%': {
+						'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%',
+					},
+					'50%': {
+						'border-radius': '30% 60% 70% 40% / 50% 60% 30% 60%',
+					},
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'image-flow': 'image-flow 8s ease-in-out infinite',
       },
     },
   },
