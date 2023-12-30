@@ -17,13 +17,13 @@ const Hero: FunctionComponent = () => {
                     <span className="w-[570px] text-xl">
                         I'm passionate about <strong>Web Development</strong>. Currently looking for a job and learning NextJS and Angular with SpringBoot. Based in <strong>Gdańsk, Poland📍</strong>
                     </span>
-                    <div className="flex flex-col gap-4 text-2xl text-main-black">
-                        <div className="flex flex-col gap-2 link">
+                    <div className="flex flex-col gap-4 text-2xl">
+                        <div className="flex flex-col gap-2 link dark:after:bg-white">
                             <Link href='https://github.com/BartoszBrodowski' target="_blank" className="flex items-center gap-2"><GithubIcon size={iconSize} />
                                 Github
                             </Link>
                         </div>
-                        <div className="flex flex-col gap-2 link">
+                        <div className="flex flex-col gap-2 link dark:after:bg-white">
                             <Link href='https://www.linkedin.com/in/bartoszbrodowski/' target="_blank" className="flex items-center gap-2"><LinkedinIcon strokeWidth={1.5} size={iconSize} />
                                 LinkedIn
                             </Link>
