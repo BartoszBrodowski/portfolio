@@ -11,6 +11,7 @@ const OccupationText = () => {
                     sequence={["Software Engineer 💻", 2000, "CS Student 🎓", 2000]}
                     wrapper="span"
                     speed={50}
+                    style={{'display': 'inline-block'}}
                     repeat={Infinity}
                 />
             </span>
