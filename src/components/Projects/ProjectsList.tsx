@@ -4,14 +4,23 @@ import ProjectCard from "./ProjectCard";
 
 interface ProjectsListProps {
     projects: Project[];
+    setClickedProject: (index: number) => void
 }
  
-const ProjectsList: FunctionComponent<ProjectsListProps> = ({projects}) => {
+const ProjectsList: FunctionComponent<ProjectsListProps> = ({projects, setClickedProject}) => {
+    const changeProject = (index: number): void => {
+        setClickedProject(index);
+    }
     return (  
         <ul className="p-4">
-            {projects.map((project) => {
+            {projects.map((project, index) => {
                 return (
-                    <ProjectCard project={project} />
+                    <ProjectCard 
+                    key={index}
+                    project={project}
+                    changeProject={changeProject}
+                    index={index}
+                    />
                 )
             })}
         </ul>

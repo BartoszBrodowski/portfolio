@@ -11,13 +11,6 @@ interface NavProps {
 }
 
 const Nav: FunctionComponent<NavProps> = ({setProjects}) => {
-    const [clicked, setClicked] = useState<number>(0);
-
-    const changeTab = (index: number): void => {
-        setClicked(index);
-        setProjects(navTabs[index].projects!)
-    }
-
     return (  
         <div className="w-full max-w-[200px] m-2">
             <nav>

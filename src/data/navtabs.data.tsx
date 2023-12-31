@@ -15,6 +15,13 @@ export const navTabs: NavTabInfo[] = [
                 technologies: ["React", "TypeScript", "TailwindCSS", "Node.js", "Express.js", "MongoDB"],
                 github: "blank",
 
+            },
+            {
+                name: "MacroMaster",
+                date: "2023-10-01",
+                description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque commodi ipsam sit sint praesentium",
+                technologies: ["NextJS", "TailwindCSS"],
+                github: "blank"
             }
         ],
         isActive: true

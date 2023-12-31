@@ -5,12 +5,16 @@ import { Project } from "@/interfaces/project.interface";
 import { Badge } from "../ui/badge";
 
 interface ProjectCardProps {
-    project: Project
+    project: Project;
+    index: number;
+    changeProject: (index: number) => void;
 }
  
-const ProjectCard: FunctionComponent<ProjectCardProps> = ({project}) => {
+const ProjectCard: FunctionComponent<ProjectCardProps> = ({project, index, changeProject}) => {
     return (  
-        <Card className="hover:bg-accent hover:cursor-pointer transition-all">
+        <Card className="hover:bg-accent hover:cursor-pointer transition-all"
+        onClick={() => changeProject(index)}
+        >
             <CardHeader className="p-4">
                 <div className="flex justify-between items-center">
                     <h2 className="text-sm font-semibold">{project.name}</h2>
@@ -24,7 +28,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({project}) => {
                 <ul className="flex gap-1 flex-wrap">
                     {project.technologies.map((technology, index) => {
                         return (
-                            <Badge variant={index > 2 ? 'secondary' : undefined}>
+                            <Badge key={index} variant={index > 2 ? 'secondary' : undefined}>
                                 {technology}
                             </Badge>
                         )

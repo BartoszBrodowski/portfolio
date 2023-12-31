@@ -9,9 +9,9 @@ const iconSize = 36;
 
 const Hero: FunctionComponent = () => {
     return ( 
-        <>
+        <div className="h-full">
             <ThemeToggle />
-            <div className="flex flex-col justify-center items-start gap-20 h-screen lg:mt-0 relative w-4/5">
+            <div className="flex flex-col justify-center items-start gap-20 h-screen lg:mt-0 relative w-full">
                 <OccupationText />
                 <div className="flex items-center gap-40 w-full">
                     <span className="w-[570px] text-xl">
@@ -31,7 +31,7 @@ const Hero: FunctionComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
  

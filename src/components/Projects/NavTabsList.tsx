@@ -8,7 +8,7 @@ import NavTab from "./NavTab";
 
 interface NavTabsListProps {
     tabs: NavTabInfo[];
-    setProjects: (projects: Project[]) => void
+    setProjects: (projects: Project[]) => void;
 }
  
 const NavTabsList: FunctionComponent<NavTabsListProps> = ({tabs, setProjects}) => {
