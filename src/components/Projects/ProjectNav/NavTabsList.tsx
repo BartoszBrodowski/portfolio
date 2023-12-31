@@ -19,7 +19,7 @@ const NavTabsList: FunctionComponent<NavTabsListProps> = ({tabs, setProjects}) =
         setProjects(navTabs[index].projects!)
     }
     return (  
-        <ul className="flex flex-col gap-1">
+        <ul className="flex flex-col gap-1 m-2">
             {navTabs.map((tab, index) => {
                 return (
                     <NavTab isClicked={clicked === index} changeTab={changeTab} key={index} tab={tab} index={index} />

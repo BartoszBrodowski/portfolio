@@ -1,7 +1,7 @@
 'use client';
 
 import { FunctionComponent, useState } from "react";
-import Nav from "./Nav";
+import Nav from "./ProjectNav/Nav";
 import ProjectsInfo from "./ProjectIsnfo";
 import { Separator } from "../ui/separator";
 import { Project } from "@/interfaces/project.interface";
@@ -19,6 +19,7 @@ const Projects: FunctionComponent = () => {
     const changeProjectIndex = (index: number) => {
         setClickedProject(index)
     }
+
     return (  
         <div className="flex justify-center items-start h-full w-full border rounded-md">
             <Nav setProjects={changeProjects} /> 

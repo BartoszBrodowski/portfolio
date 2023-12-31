@@ -3,7 +3,7 @@
 import { NavTabInfo } from "@/interfaces/navtab.interface";
 import { cn } from "@/lib/utils";
 import { FunctionComponent, useState } from "react";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "../../ui/button";
 
 interface NavTabProps {
     tab: NavTabInfo;
