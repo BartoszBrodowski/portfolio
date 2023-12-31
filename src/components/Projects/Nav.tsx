@@ -4,6 +4,7 @@ import { navTabs } from "@/data/navtabs.data";
 import { FunctionComponent, useState } from "react";
 import NavTab from "./NavTab";
 import { Project } from "@/interfaces/project.interface";
+import NavTabsList from "./NavTabsList";
 
 interface NavProps {
     setProjects: (projects: Project[]) => void
@@ -20,13 +21,7 @@ const Nav: FunctionComponent<NavProps> = ({setProjects}) => {
     return (  
         <div className="w-full max-w-[200px] m-2">
             <nav>
-                <ul className="flex flex-col gap-1">
-                    {navTabs.map((tab, index) => {
-                        return (
-                            <NavTab isClicked={clicked === index} changeTab={changeTab} key={index} tab={tab} index={index} />
-                        )
-                    })}
-                </ul>
+                <NavTabsList setProjects={setProjects} tabs={navTabs} />
             </nav>
         </div>
     );
