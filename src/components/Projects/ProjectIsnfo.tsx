@@ -4,7 +4,7 @@ import { Project } from "@/interfaces/project.interface";
 import { FunctionComponent } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "../ui/resizable";
 import { Separator } from "../ui/separator";
-import ProjectContent from "./ProjectContent";
+import ProjectContent from "./ProjectContent/ProjectContent";
 import ProjectsList from "./ProjectsList";
 
 interface ProjectsInfoProps {
@@ -26,7 +26,7 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, clickedPr
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={75}>
-                <div className="flex h-full items-center justify-center p-6">
+                <div className="flex h-full items-start justify-center">
                     <ProjectContent project={projects[clickedProjectIndex]} />
                 </div>
             </ResizablePanel>
