@@ -9,6 +9,7 @@ import { navTabs } from "@/data/navtabs.data";
 
 const Projects: FunctionComponent = () => {
     const [clickedProject, setClickedProject] = useState<number>(0);
+    const [field, setField] = useState<string>('Frontend');
     const [currentProjects, setCurrentProjects] = useState<Project[]>(navTabs[0].projects || []);
 
     const changeProjects = (projects: Project[]) => {
@@ -20,11 +21,15 @@ const Projects: FunctionComponent = () => {
         setClickedProject(index)
     }
 
+    const changeFilterField = (field: string) => {
+        setField(field)
+    }
+
     return (  
-        <div className="flex justify-center items-start h-full w-full border rounded-md">
-            <Nav setProjects={changeProjects} /> 
+        <div className="flex justify-center items-start h-full min-h-[600px] w-full border rounded-md">
+            <Nav currentFilterField={field} setProjects={changeProjects} changeFilterField={changeFilterField} /> 
             <Separator orientation="vertical" />
-            <ProjectsInfo clickedProjectIndex={clickedProject} setClickedProject={changeProjectIndex} projects={currentProjects} />
+            <ProjectsInfo filterField={field} clickedProjectIndex={clickedProject} setClickedProject={changeProjectIndex} projects={currentProjects} />
         </div>
     );
 }

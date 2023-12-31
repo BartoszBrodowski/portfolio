@@ -5,28 +5,27 @@ import { FunctionComponent, useState } from "react";
 
 interface ProfileTabProps {
     currentField?: string;
+    changeFilterField: (field: string) => void;
 }
 
 const fields = ['Frontend', 'Backend', 'Fullstack'];
  
-const ProfileTab: FunctionComponent<ProfileTabProps> = ({currentField}) => {
-    const [field, setField] = useState<string>('Frontend');
+const ProfileTab: FunctionComponent<ProfileTabProps> = ({currentField, changeFilterField}) => {
     return (  
         <div className="flex items-center justify-between h-[60px] px-2">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant='outline' className="flex justify-between w-full">
-                        {field}
+                        {currentField}
                         <ChevronsUpDown size={16} />
                     </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuRadioGroup value={field}>
-                    <DropdownMenuContent>
-                        <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup value={currentField}>
+                    <DropdownMenuContent className="w-[230px]">   
                         <ul className="flex flex-col">
                             {fields.map((field, index) => {
                                 return (
-                                    <DropdownMenuRadioItem onClick={() => setField(field)} value={field} className="hover:cursor-pointer w-full" key={index}>{field}</DropdownMenuRadioItem>
+                                    <DropdownMenuRadioItem onClick={() => changeFilterField(field)} value={field} className="hover:cursor-pointer w-full" key={index}>{field}</DropdownMenuRadioItem>
                                 )
                             })}
                         </ul>

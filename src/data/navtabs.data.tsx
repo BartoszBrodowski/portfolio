@@ -9,21 +9,22 @@ export const navTabs: NavTabInfo[] = [
         icon: <Inbox size={iconSize} />,
         projects: [
             {
-                name: "Guitar shop",
+                name: "Guitar Shop",
                 date: "2021-08-01",
                 shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
                 technologies: ["React", "TypeScript", "TailwindCSS", "Node.js", "Express.js", "MongoDB"],
                 github: "blank",
-
+                field: "Frontend"
             },
             {
-                name: "MacroMaster",
+                name: "MacroMaster App",
                 date: "2023-10-01",
                 shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
                 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque commodi ipsam sit sint praesentium",
                 technologies: ["NextJS", "TailwindCSS"],
-                github: "blank"
+                github: "blank",
+                field: "Fullstack"
             }
         ],
         isActive: true
@@ -33,12 +34,13 @@ export const navTabs: NavTabInfo[] = [
         icon: <File size={iconSize} />,
         projects: [
             {
-                name: "MacroMaster",
+                name: "MacroMaster App",
                 date: "2023-10-01",
                 shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
                 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque commodi ipsam sit sint praesentium",
                 technologies: ["NextJS", "TailwindCSS"],
-                github: "blank"
+                github: "blank",
+                field: "Fullstack"
             }
         ],
         isActive: true

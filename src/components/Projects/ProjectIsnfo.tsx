@@ -10,10 +10,12 @@ import ProjectsList from "./ProjectsList";
 interface ProjectsInfoProps {
     projects: Project[];
     clickedProjectIndex: number;
-    setClickedProject: (index: number) => void
+    setClickedProject: (index: number) => void;
+    filterField: string;
 }
  
-const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, clickedProjectIndex, setClickedProject}) => {
+const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, clickedProjectIndex, setClickedProject, filterField}) => {
+    const filteredProjects = projects.filter(project => project.field === filterField)
     return (  
         <ResizablePanelGroup
             direction="horizontal"
@@ -22,12 +24,12 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, clickedPr
             <ResizablePanel style={{ minWidth: '400px' }} defaultSize={25}>
                 <h1 className="font-bold text-xl p-4">Projects Info</h1>
                 <Separator />
-                <ProjectsList projects={projects} setClickedProject={setClickedProject} />
+                <ProjectsList projects={filteredProjects} setClickedProject={setClickedProject} />
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={75}>
                 <div className="flex h-full items-start justify-center">
-                    <ProjectContent project={projects[clickedProjectIndex]} />
+                    <ProjectContent field={filterField} project={projects[clickedProjectIndex]} />
                 </div>
             </ResizablePanel>
         </ResizablePanelGroup>

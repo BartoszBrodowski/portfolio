@@ -5,16 +5,17 @@ import { FunctionComponent } from "react";
 
 interface SenderInfoProps {
     project: Project;
+    initials: string;
 }
  
-const SenderInfo: FunctionComponent<SenderInfoProps> = ({project}) => {
+const SenderInfo: FunctionComponent<SenderInfoProps> = ({project, initials}) => {
     return (  
         <>
             <div className="flex justify-between items-start p-4">
                 <div className="flex items-center gap-4">
                     <Avatar>
                         <AvatarFallback>
-                            FE
+                            {initials}
                         </AvatarFallback>
                     </Avatar>
                     <div>
