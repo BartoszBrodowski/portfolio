@@ -11,7 +11,7 @@ export const navTabs: NavTabInfo[] = [
             {
                 name: "Guitar shop",
                 date: "2021-08-01",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
                 technologies: ["React", "TypeScript", "TailwindCSS", "Node.js", "Express.js", "MongoDB"],
                 github: "blank",
 

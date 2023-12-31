@@ -9,12 +9,12 @@ interface NavTabProps {
     tab: NavTabInfo;
     index: number;
     isClicked: boolean;
-    setClicked: (index: number) => void
+    changeTab: (index: number) => void
 }
  
-const NavTab: FunctionComponent<NavTabProps> = ({tab, index, isClicked, setClicked}) => {
+const NavTab: FunctionComponent<NavTabProps> = ({tab, index, isClicked, changeTab}) => {
     return ( 
-        <button disabled={!tab.isActive} onClick={() => setClicked(index)} className={cn(
+        <button disabled={!tab.isActive} onClick={() => changeTab(index)} className={cn(
             isClicked
             ? buttonVariants({variant: 'default'})
             : buttonVariants({variant: 'ghost'}),
