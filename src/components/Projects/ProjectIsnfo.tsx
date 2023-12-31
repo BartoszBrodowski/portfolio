@@ -29,7 +29,7 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, clickedPr
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={75}>
                 <div className="flex h-full items-start justify-center">
-                    <ProjectContent field={filterField} project={projects[clickedProjectIndex]} />
+                    <ProjectContent project={projects[clickedProjectIndex]} />
                 </div>
             </ResizablePanel>
         </ResizablePanelGroup>
