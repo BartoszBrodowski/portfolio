@@ -9,27 +9,32 @@ import ProjectsList from "./ProjectsList";
 
 interface ProjectsInfoProps {
     projects: Project[];
-    clickedProjectIndex: number;
-    setClickedProject: (index: number) => void;
+    project: Project;
+    setClickedProject: (project: Project) => void;
     filterField: string;
 }
  
-const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, clickedProjectIndex, setClickedProject, filterField}) => {
-    const filteredProjects = projects.filter(project => project.field === filterField)
+const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, project, setClickedProject, filterField}) => {
+    const filteredProjects = projects.filter(project => {
+        return filterField === 'All' ? project : project.field === filterField
+    })
     return (  
         <ResizablePanelGroup
             direction="horizontal"
-            className="min-h-[200px] w-full"
+            className="min-h-[600px] w-full"
         >
-            <ResizablePanel style={{ minWidth: '400px' }} defaultSize={25}>
-                <h1 className="font-bold text-xl p-4">Projects Info</h1>
+            <ResizablePanel defaultSize={45}>
+                <div className="flex h-[72px]">
+                    <Separator orientation="vertical" />
+                    <h1 className="flex items-center font-bold text-xl p-4">Projects</h1>
+                </div>
                 <Separator />
                 <ProjectsList projects={filteredProjects} setClickedProject={setClickedProject} />
             </ResizablePanel>
             <ResizableHandle withHandle />
-            <ResizablePanel defaultSize={75}>
+            <ResizablePanel defaultSize={55}>
                 <div className="flex h-full items-start justify-center">
-                    <ProjectContent project={projects[clickedProjectIndex]} />
+                    <ProjectContent project={project} />
                 </div>
             </ResizablePanel>
         </ResizablePanelGroup>

@@ -1,6 +1,8 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Project } from "@/interfaces/project.interface";
+import { GitBranchPlus, Github } from "lucide-react";
+import Link from "next/link";
 import { FunctionComponent } from "react";
 
 interface SenderInfoProps {
@@ -18,9 +20,13 @@ const SenderInfo: FunctionComponent<SenderInfoProps> = ({project, initials}) => 
                             {initials}
                         </AvatarFallback>
                     </Avatar>
-                    <div>
+                    <div className="flex flex-col gap-2">
                         <h1 className="text-sm font-semibold">{project.name}</h1>
-                        <p className="text-xs w-[300px]">{project.shortDescription}</p>
+                        <h2 className="text-xs flex items-center gap-1 underline hover:cursor-pointer"><Github size={16} />
+                            <Link className="hover:text-main-green transition-all transform-150" href={project.github} target="#"> 
+                                {project.github}
+                            </Link>
+                        </h2>
                     </div>
                 </div>
                 <span className="text-xs text-muted-foreground">{project.date}</span>

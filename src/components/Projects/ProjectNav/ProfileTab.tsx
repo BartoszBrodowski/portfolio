@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ChevronsUpDown } from "lucide-react";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 
 interface ProfileTabProps {
     currentField?: string;
     changeFilterField: (field: string) => void;
 }
 
-const fields = ['Frontend', 'Backend', 'Fullstack'];
- 
+const fields = ['All', 'Frontend', 'Backend', 'Fullstack'];
+
 const ProfileTab: FunctionComponent<ProfileTabProps> = ({currentField, changeFilterField}) => {
     return (  
-        <div className="flex items-center justify-between h-[60px] px-2">
+        <div className="flex items-center justify-between p-4">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant='outline' className="flex justify-between w-full">
@@ -29,7 +29,6 @@ const ProfileTab: FunctionComponent<ProfileTabProps> = ({currentField, changeFil
                                 )
                             })}
                         </ul>
-                        {/* <DropdownMenuCheckboxItem checked={true}>Test</DropdownMenuCheckboxItem> */}
                     </DropdownMenuContent>
                 </DropdownMenuRadioGroup>
             </DropdownMenu>

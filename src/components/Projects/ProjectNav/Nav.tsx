@@ -1,12 +1,11 @@
 'use client'
 
+import { Separator } from "@/components/ui/separator";
 import { navTabs } from "@/data/navtabs.data";
-import { FunctionComponent, useState } from "react";
-import NavTab from "./NavTab";
 import { Project } from "@/interfaces/project.interface";
+import { FunctionComponent } from "react";
 import NavTabsList from "./NavTabsList";
 import ProfileTab from "./ProfileTab";
-import { Separator } from "@/components/ui/separator";
 
 interface NavProps {
     currentFilterField: string;

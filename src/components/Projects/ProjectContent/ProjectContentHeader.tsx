@@ -26,7 +26,7 @@ const forwardIcons: IconTooltip[] = [
  
 const ProjectContentHeader: FunctionComponent = () => {
     return (  
-        <div className="flex justify-between w-full h-[60px] px-3">
+        <div className="flex justify-between w-full h-[72px] px-3">
             <TooltipProvider delayDuration={0}>
                 <ul className="flex items-center justify-between gap-3">
                     {archiveIcons.map((icon, index) => {
