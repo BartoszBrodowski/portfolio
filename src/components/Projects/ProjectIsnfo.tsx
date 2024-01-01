@@ -1,7 +1,7 @@
 'use client'
 
 import { Project } from "@/interfaces/project.interface";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "../ui/resizable";
 import { Separator } from "../ui/separator";
 import ProjectContent from "./ProjectContent/ProjectContent";
@@ -15,9 +15,18 @@ interface ProjectsInfoProps {
 }
  
 const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, project, setClickedProject, filterField}) => {
+    const [searchFilter, setSearchFilter] = useState<string>("");
+
+    const changeSearchFilter = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setSearchFilter(event.target.value);
+    }
+
     const filteredProjects = projects.filter(project => {
-        return filterField === 'All' ? project : project.field === filterField
-    })
+        return (
+            (filterField === 'All' || project.field === filterField) &&
+            project.name.toLowerCase().includes(searchFilter.toLowerCase())
+        );
+    });
     return (  
         <ResizablePanelGroup
             direction="horizontal"
@@ -29,7 +38,7 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, project, 
                     <h1 className="flex items-center font-bold text-xl p-4">Projects</h1>
                 </div>
                 <Separator />
-                <ProjectsList projects={filteredProjects} setClickedProject={setClickedProject} />
+                <ProjectsList projects={filteredProjects} setClickedProject={setClickedProject} setSearchFilter={changeSearchFilter} />
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={55}>
