@@ -56,7 +56,9 @@ const config = {
         },
         // 'main-text-black': '#2D2E32',
         'main-black': '#09090B',
-        'main-green': '#80c679'
+        'main-green': '#80c679',
+        'main-red': '#823038',
+        'main-orange': '#BC6C25'
       },
       borderRadius: {
         lg: "var(--radius)",
