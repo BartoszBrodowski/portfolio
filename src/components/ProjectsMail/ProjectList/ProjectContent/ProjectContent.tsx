@@ -42,9 +42,9 @@ const ProjectContent: FunctionComponent<ProjectContentProps> = ({ project }) => 
                     </>)
                     : 
                     (
-                        <div className="flex flex-col items-center justify-center h-full">
-                            <h1 className="text-2xl font-bold">No project selected</h1>
-                            <h2 className="text-lg font-semibold">Select a project to display its content</h2>
+                        <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
+                            <h1 className="text-2xl font-semibold">No project selected</h1>
+                            <h2 className="text-lg">Select a project to display its content</h2>
                         </div>
                     )
                 }
