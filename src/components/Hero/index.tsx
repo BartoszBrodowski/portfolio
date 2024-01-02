@@ -9,7 +9,7 @@ const iconSize = 36;
 
 const Hero: FunctionComponent = () => {
     return ( 
-        <div className="h-full">
+        <div id="home" className="h-full">
             <ThemeToggle />
             <div className="flex flex-col justify-center items-start gap-20 h-screen lg:mt-0 relative w-full">
                 <OccupationText />

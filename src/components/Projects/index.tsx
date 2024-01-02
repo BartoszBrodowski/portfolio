@@ -1,34 +1,16 @@
 'use client';
 
-import { FunctionComponent, useState } from "react";
-import { Separator } from "../ui/separator";
-import { Project } from "@/interfaces/project.interface";
-import { mainNavTabs } from "@/data/navtabs.data";
-import Nav from "./ProjectNav/Nav";
-import ProjectsInfo from "./ProjectList/ProjectIsnfo";
+import { FunctionComponent } from "react";
+import ProjectMail from "./Mail";
 
 const Projects: FunctionComponent = () => {
-    const [clickedProject, setClickedProject] = useState<Project>({} as Project);
-    const [field, setField] = useState<string>('All');
-    const [currentProjects, setCurrentProjects] = useState<Project[]>(mainNavTabs[0].projects || []);
-
-    const changeProjects = (projects: Project[]) => {
-        setCurrentProjects(projects)
-        console.log(projects)
-    }
-
-    const changeProjectIndex = (project: Project) => {
-        setClickedProject(project)
-    }
-
-    const changeFilterField = (field: string) => {
-        setField(field)
-    }
-
     return (  
-        <div className="flex justify-center items-start h-[600px] w-full border rounded-md">
-            <Nav currentFilterField={field} setProjects={changeProjects} changeFilterField={changeFilterField} /> 
-            <ProjectsInfo filterField={field} project={clickedProject} setClickedProject={changeProjectIndex} projects={currentProjects} />
+        <div id="projects" className="flex flex-col justify-center gap-8 pt-4">
+            <div className="flex flex-col justify-center text-center gap-2">
+                <h1 className="text-5xl font-bold">Projects</h1>
+                <p className="text-md text-muted-foreground">It's that time of the day to check your email.</p>
+            </div>
+            <ProjectMail />
         </div>
     );
 }
