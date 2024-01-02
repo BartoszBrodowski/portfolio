@@ -1,4 +1,4 @@
-import GuitarShop from "@/components/Projects/ModalDisplays/GuitarShop";
+import GuitarShop from "@/components/ProjectsMail/ModalDisplays/GuitarShop";
 import { NavTabInfo } from "@/interfaces/navtab.interface";
 import { File, Inbox, Trash2, Archive, UsersRound, Bell, MessagesSquare, Tag, AlertCircle } from "lucide-react";
 
@@ -41,7 +41,7 @@ const mainNavTabs: NavTabInfo[] = [
                 technologies: ["NextJS", "TailwindCSS"],
                 github: "blank",
                 field: "Fullstack"
-            }
+            },
         ],
         isActive: true
     },

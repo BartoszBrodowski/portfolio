@@ -2,7 +2,7 @@
 
 import { IconTooltip } from "@/interfaces/icon-tooltip.interface";
 import { Tooltip } from "@nextui-org/react";
-import { FolderDot, Home } from 'lucide-react';
+import { Home, FolderDot, Lightbulb } from 'lucide-react';
 import { FunctionComponent } from "react";
 import { Button } from "../ui/button";
 
@@ -17,6 +17,11 @@ const icons: NavTooltip[] = [
         element: <Home size={iconSize} />,
         tooltipText: 'Home',
         id: 'home'
+    },
+    {
+        element: <Lightbulb size={iconSize} />,
+        tooltipText: 'Skills',
+        id: 'skills'
     },
     {
         element: <FolderDot size={iconSize} />,
@@ -38,7 +43,7 @@ const Nav: FunctionComponent<NavProps> = () => {
         }
     }
     return (  
-        <div className="fixed right-4 top-1/2 transform -translate-y-1/2 rounded-md bg-muted p-3">
+        <div className="fixed left-0 top-1/2 transform -translate-y-1/2 rounded-md p-3">
             <ul className="flex flex-col gap-4">
                 {icons.map((icon, index) => {
                     return (

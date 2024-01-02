@@ -55,7 +55,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         // 'main-text-black': '#2D2E32',
-        'main-black': '#212121',
+        'main-black': '#09090B',
         'main-green': '#80c679'
       },
       borderRadius: {
