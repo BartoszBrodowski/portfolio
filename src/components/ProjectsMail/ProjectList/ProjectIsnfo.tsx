@@ -41,7 +41,7 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, project, 
                 <ProjectsList projects={filteredProjects} setClickedProject={setClickedProject} setSearchFilter={changeSearchFilter} />
             </ResizablePanel>
             <ResizableHandle withHandle />
-            <ResizablePanel minSize={30}>
+            <ResizablePanel minSize={40}>
                 <div className="flex h-full items-start justify-center">
                     <ProjectContent project={project} />
                 </div>

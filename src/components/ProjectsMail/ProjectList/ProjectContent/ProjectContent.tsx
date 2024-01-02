@@ -19,11 +19,11 @@ interface ProjectContentProps {
 const ProjectContent: FunctionComponent<ProjectContentProps> = ({ project }) => {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     return ( 
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col h-full w-full">
                 <ProjectContentHeader />
                 <Separator />
-                {project.name && 
-                    <>
+                {project.name ? 
+                    (<>
                         <ScrollArea className="h-[530px]">
                             <SenderInfo project={project} initials={'BB'} />
                             <div className="flex flex-col items-center gap-12 p-4">
@@ -39,7 +39,14 @@ const ProjectContent: FunctionComponent<ProjectContentProps> = ({ project }) => 
                                 <ProjectModal project={project} isOpen={isOpen} onOpenChange={onOpenChange} onClose={onOpenChange} />
                             </div>
                         </ScrollArea>
-                    </>
+                    </>)
+                    : 
+                    (
+                        <div className="flex flex-col items-center justify-center h-full">
+                            <h1 className="text-2xl font-bold">No project selected</h1>
+                            <h2 className="text-lg font-semibold">Select a project to display its content</h2>
+                        </div>
+                    )
                 }
         </div>
     );
