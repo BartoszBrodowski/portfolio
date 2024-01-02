@@ -2,8 +2,8 @@
 
 import { Project } from "@/interfaces/project.interface";
 import { FunctionComponent, useState } from "react";
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "../ui/resizable";
-import { Separator } from "../ui/separator";
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "../../ui/resizable";
+import { Separator } from "../../ui/separator";
 import ProjectContent from "./ProjectContent/ProjectContent";
 import ProjectsList from "./ProjectsList";
 
@@ -30,10 +30,10 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({projects, project, 
     return (  
         <ResizablePanelGroup
             direction="horizontal"
-            className="min-h-[600px] w-full"
+            className="min-h-[400px] w-full"
         >
             <ResizablePanel defaultSize={45}>
-                <div className="flex h-[72px]">
+                <div className="flex h-[68px]">
                     <Separator orientation="vertical" />
                     <h1 className="flex items-center font-bold text-xl p-4">Projects</h1>
                 </div>

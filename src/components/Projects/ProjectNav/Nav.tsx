@@ -1,7 +1,6 @@
 'use client'
 
 import { Separator } from "@/components/ui/separator";
-import { navTabs } from "@/data/navtabs.data";
 import { Project } from "@/interfaces/project.interface";
 import { FunctionComponent } from "react";
 import NavTabsList from "./NavTabsList";
@@ -19,7 +18,7 @@ const Nav: FunctionComponent<NavProps> = ({currentFilterField, setProjects, chan
             <nav>
                 <ProfileTab currentField={currentFilterField} changeFilterField={changeFilterField} />
                 <Separator orientation="horizontal" className="mb-2" />
-                <NavTabsList setProjects={setProjects} tabs={navTabs} />
+                <NavTabsList setProjects={setProjects} />
             </nav>
         </div>
     );

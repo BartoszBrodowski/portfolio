@@ -14,7 +14,7 @@ const ProfileTab: FunctionComponent<ProfileTabProps> = ({currentField, changeFil
     return (  
         <div className="flex items-center justify-between p-4">
             <DropdownMenu>
-                <DropdownMenuTrigger asChild>
+                <DropdownMenuTrigger asChild className="h-[36px]">
                     <Button variant='outline' className="flex justify-between w-full">
                         {currentField}
                         <ChevronsUpDown size={16} />

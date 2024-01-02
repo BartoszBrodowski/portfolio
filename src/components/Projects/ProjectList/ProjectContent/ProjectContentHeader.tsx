@@ -1,14 +1,10 @@
 import { FunctionComponent } from "react";
-import { Archive, ArchiveX, Trash2, Reply, ReplyAll, Forward, MoreVertical, icons } from "lucide-react";
+import { Archive, ArchiveX, Trash2, Reply, ReplyAll, Forward, MoreVertical } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 import { TooltipTrigger } from "@radix-ui/react-tooltip";
 import { Button } from "@/components/ui/button";
-
-interface IconTooltip {
-    element: JSX.Element;
-    tooltipText: string;
-}
+import { IconTooltip } from "@/interfaces/icon-tooltip.interface";
 
 const iconSize = 20
 
@@ -26,7 +22,7 @@ const forwardIcons: IconTooltip[] = [
  
 const ProjectContentHeader: FunctionComponent = () => {
     return (  
-        <div className="flex justify-between w-full h-[72px] px-3">
+        <div className="flex justify-between w-full h-[68px] px-3">
             <TooltipProvider delayDuration={0}>
                 <ul className="flex items-center justify-between gap-3">
                     {archiveIcons.map((icon, index) => {

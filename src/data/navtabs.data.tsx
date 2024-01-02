@@ -1,49 +1,32 @@
+import GuitarShop from "@/components/Projects/ModalDisplays/GuitarShop";
 import { NavTabInfo } from "@/interfaces/navtab.interface";
-import { File, Inbox, Trash2, Archive } from "lucide-react";
+import { File, Inbox, Trash2, Archive, UsersRound, Bell, MessagesSquare, Tag, AlertCircle } from "lucide-react";
 
 const iconSize = 20
 
-export const navTabs: NavTabInfo[] = [
+const mainNavTabs: NavTabInfo[] = [
     {
         name: "Inbox",
         icon: <Inbox size={iconSize} />,
         projects: [
             {
                 name: "Guitar Shop",
-                date: "2021-08-01",
-                shortDescription: " Hi Visitor, \n\nThis is the Guitar Shop project, a fullstack e-commerce web application. \n\nThe tech stack is: React, TypeScript, TailwindCSS, Node.js, Express.js, and MongoDB, as you asked. I hope you like it! Lorem",
-                content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque commodi ipsam sit sint praesentium voluptatum, quibusdam, quos, voluptas quia quae. Quisquam, voluptatum.",
-                technologies: ["React", "TypeScript", "TailwindCSS", "Node.js", "Express.js", "MongoDB"],
-                github: "https://github.com/BartoszBrodowski/frontend-uni",
-                field: "Frontend"
+                date: "2022-01-30",
+                shortDescription: " Hi Visitor, \n\nThis is the Guitar Shop project, a frontend e-commerce web application. Little addition of backend in form of a database and authentication using JWT. \n\nI've made this project as a final for Frontend Web Development course at my University. Since then I've developed significantly as a programmer, but I think it shows my journey quite well. Currently, I would do things very differently, the primary thing being to change JS to TS, but that's what I knew back then. \n\nI hope you'll enjoy it! \n\nBest regards, \nBartosz Brodowski",
+                technologies: ["React", "Redux", "TailwindCSS", "JavaScript", "Express.js", "MongoDB"],
+                github: "https://github.com/BartoszBrodowski/frontend-uni/tree/main/guitar-shop",
+                field: "Frontend",
+                modalComponent: <GuitarShop github={'https://github.com/BartoszBrodowski/frontend-uni/tree/main/guitar-shop'} />
             },
             {
                 name: "MacroMaster App",
                 date: "2023-10-01",
                 shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-                content: "yo homie i just found this sick app to keep my weight in check, you should check it out too!",
                 technologies: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "TypeScript", "Azure"],
                 github: "https://github.com/macromaster-app/web-app",
-                field: "Fullstack"
+                field: "Fullstack",
+                preview: "https://macro-master-app.vercel.app/"
             },
-            {
-                name: "MacroMaster App",
-                date: "2023-10-01",
-                shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-                content: "yo homie i just found this sick app to keep my weight in check, you should check it out too!",
-                technologies: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "TypeScript", "Azure"],
-                github: "https://github.com/macromaster-app/web-app",
-                field: "Fullstack"
-            },
-            {
-                name: "MacroMaster App",
-                date: "2023-10-01",
-                shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-                content: "yo homie i just found this sick app to keep my weight in check, you should check it out too!",
-                technologies: ["NextJS", "TailwindCSS", "PostgreSQL", "Prisma", "TypeScript", "Azure"],
-                github: "https://github.com/macromaster-app/web-app",
-                field: "Fullstack"
-            }
         ],
         isActive: true
     },
@@ -55,7 +38,6 @@ export const navTabs: NavTabInfo[] = [
                 name: "MacroMaster App",
                 date: "2023-10-01",
                 shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-                content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque commodi ipsam sit sint praesentium",
                 technologies: ["NextJS", "TailwindCSS"],
                 github: "blank",
                 field: "Fullstack"
@@ -72,5 +54,36 @@ export const navTabs: NavTabInfo[] = [
         name: "Archive",
         icon: <Archive size={iconSize} />,
         isActive: false
-    }
+    },
 ]
+
+const otherNavTabs: NavTabInfo[] = [
+    {
+        name: "Social",
+        icon: <UsersRound size={iconSize} />,
+        isActive: false
+    },
+    {
+        name: "Notifications",
+        icon: <Bell size={iconSize} />,
+        isActive: false
+    },
+    {
+        name: "Forums",
+        icon: <MessagesSquare size={iconSize} />,
+        isActive: false
+    },
+    {
+        name: "Tags",
+        icon: <Tag size={iconSize} />,
+        isActive: false
+    },
+    {
+        name: "Spam",
+        icon: <AlertCircle size={iconSize} />,
+        isActive: false
+    },
+
+]
+
+export { mainNavTabs, otherNavTabs }

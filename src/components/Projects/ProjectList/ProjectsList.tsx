@@ -1,9 +1,9 @@
 import { Project } from "@/interfaces/project.interface";
 import { FunctionComponent, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { Separator } from "../ui/separator";
-import { ScrollArea } from "../ui/scroll-area";
-import { Input } from "../ui/input";
+import { Separator } from "../../ui/separator";
+import { ScrollArea } from "../../ui/scroll-area";
+import { Input } from "../../ui/input";
 import { Search } from "lucide-react";
 
 interface ProjectsListProps {
