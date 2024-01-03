@@ -16,7 +16,7 @@ const ThemeToggle = () => {
   const { setTheme } = useTheme()
 
   return (
-    <div className="absolute right-8 top-8">
+    <div className="absolute right-8 top-8 z-10">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button className="dark:border-[1px]" variant="outline" size="icon">

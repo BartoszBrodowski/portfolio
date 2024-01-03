@@ -6,7 +6,7 @@ const iconSize = 20
 
 const mainNavTabs: NavTabInfo[] = [
     {
-        name: "Inbox",
+        name: "Inbox (done)",
         icon: <Inbox size={iconSize} />,
         projects: [
             {
@@ -31,7 +31,7 @@ const mainNavTabs: NavTabInfo[] = [
         isActive: true
     },
     {
-        name: "Drafts",
+        name: "Drafts (in progress)",
         icon: <File size={iconSize} />,
         projects: [
             {

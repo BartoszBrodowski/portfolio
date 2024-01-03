@@ -28,6 +28,7 @@ const ProjectMail: FunctionComponent<ProjectMailProps> = () => {
         setField(field)
     }
 
+
     return (  
         <div className="flex justify-center items-start h-[560px] w-full border rounded-md">
             <Nav currentFilterField={field} setProjects={changeProjects} changeFilterField={changeFilterField} /> 

@@ -2,7 +2,7 @@
 
 import { NavTabInfo } from "@/interfaces/navtab.interface";
 import { cn } from "@/lib/utils";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { buttonVariants } from "../../ui/button";
 
 interface NavTabProps {
@@ -25,7 +25,7 @@ const NavTab: FunctionComponent<NavTabProps> = ({tab, index, isClicked, changeTa
                 <span>{tab.icon}</span>
                 <h1>{tab.name}</h1>
             </div>
-            <span>128</span>
+            {tab.isActive && <span className="flex h-2 w-2 rounded-full bg-main-green" />}
         </button>
     );
 }

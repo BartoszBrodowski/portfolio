@@ -3,7 +3,8 @@ import { Card, CardContent, CardFooter, CardHeader } from "../../ui/card";
 import { Project } from "@/interfaces/project.interface";
 import { Badge } from "../../ui/badge";
 import { formatDistanceToNow } from "date-fns";
-import { Dot } from "lucide-react";
+import { Dot, Github } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectCardProps {
     project: Project;
@@ -27,8 +28,12 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({project, index, chang
                     </span>
                 </div>
             </CardHeader>
-            <CardContent className="text-muted-foreground text-xs line-clamp-3 py-1 px-4">
-                {project.shortDescription.substring(0, 300)}
+            <CardContent className="text-xs line-clamp-3 py-1 px-4">
+                <p className="flex items-center gap-2 mb-2">
+                    <Github size={12} />
+                    <Link href={project.github} target="#" className="hover:text-main-green transition-all transform-150 w-full">{project.github}</Link>
+                </p>
+                <p className="text-muted-foreground">{project.shortDescription.substring(0, 300)}</p>
             </CardContent>
             <CardFooter className="mt-2 p-4 pt-2">
                 <ul className="flex gap-1 flex-wrap">
