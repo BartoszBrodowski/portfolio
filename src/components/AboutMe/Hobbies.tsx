@@ -7,7 +7,7 @@ const Hobbies: FunctionComponent = () => {
     return (
         <div className='w-full text-xl'>
             <h2 className="font-semibold text-2xl mb-2">Hobbies</h2>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" className="w-full" defaultValue='item-1'>
                 <AccordionItem value="item-1">
                     <AccordionTrigger className="font-normal">Formula 1</AccordionTrigger>
                     <AccordionContent>
