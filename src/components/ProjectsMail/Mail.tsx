@@ -29,7 +29,7 @@ const ProjectMail: FunctionComponent<ProjectMailProps> = () => {
     }
 
     return (  
-        <div className="flex justify-center items-start h-[600px] w-full border rounded-md">
+        <div className="flex justify-center items-start h-[560px] w-full border rounded-md">
             <Nav currentFilterField={field} setProjects={changeProjects} changeFilterField={changeFilterField} /> 
             <ProjectsInfo filterField={field} project={clickedProject} setClickedProject={changeProjectIndex} projects={currentProjects} />
         </div>

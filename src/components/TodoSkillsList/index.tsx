@@ -13,10 +13,10 @@ const tabs = ["frontend", "backend", "python", "other"];
  
 const ToDoSkillsList: FunctionComponent<ToDoSkillsListProps> = () => {
     return (  
-        <div id="skills" className="flex flex-col justify-center items-center gap-8 w-full h-screen pt-4">
+        <div id="skills" className="flex flex-col justify-center items-center gap-8 w-full h-screen pt-8">
             <div className="flex flex-col text-center gap-2">
                 <h1 className="text-5xl font-bold">Skills</h1>
-                <p className="text-md text-muted-foreground">I better start learning so I'm done by the end of the day...</p>
+                <p className="text-md text-muted-foreground">I better start working so I'm done by the end of the day...</p>
             </div>
             <Tabs defaultValue={tabs[0]} className="w-4/5 h-full">
                 <TabsList className="grid w-full grid-cols-4 w-2/5">

@@ -7,7 +7,7 @@ interface SkillInField {
 }
 
 
-export const todoSkills = [
+export const todoSkills: SkillInField[] = [
     {
         name: "frontend",
         skills: [
@@ -149,14 +149,14 @@ export const todoSkills = [
             {
                 name: "Linux",
                 startedLearningDate: "2021-09",
-                advancementLevel: AdvanceLevel.INTERMEDIATE,
+                advancementLevel: AdvanceLevel.ADVANCED,
                 description: "I use Linux as my main OS."
             },
             {
                 name: "Git",
                 startedLearningDate: "2021-09",
                 advancementLevel: AdvanceLevel.ADVANCED,
-                description: "Worked in group projects. I know how to resolve conflicts, use branches, make pull requests etc."
+                description: "I know how to do clean commit messages, resolve conflicts, use branches, make pull requests etc."
             },
             {
                 name: "Figma",

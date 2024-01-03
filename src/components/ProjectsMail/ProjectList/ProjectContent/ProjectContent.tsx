@@ -31,7 +31,7 @@ const ProjectContent: FunctionComponent<ProjectContentProps> = ({ project }) => 
                                 <Button 
                                     onClick={onOpen} 
                                     variant="outline" 
-                                    className="text-main-green hover:text-primary-foreground border-main-green hover:bg-main-green"
+                                    className="flex gap-1 text-main-green hover:text-primary-foreground border-main-green hover:bg-main-green"
                                 >
                                     <Paperclip size={16}></Paperclip>
                                     Display project

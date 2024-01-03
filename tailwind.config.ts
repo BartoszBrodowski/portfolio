@@ -54,7 +54,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // 'main-text-black': '#2D2E32',
         'main-black': '#09090B',
         'main-green': '#80c679',
         'main-red': '#823038',
@@ -82,11 +81,22 @@ const config = {
 						'border-radius': '30% 60% 70% 40% / 50% 60% 30% 60%',
 					},
         },
+        'button-float': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            boxShadow: '0 0 10 10 rgba(255, 255, 255)',
+          },
+          '50%': {
+            transform: 'scale(1.5)',
+            boxShadow: '10 10 10 10 rgba(255, 255, 255)',
+          },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         'image-flow': 'image-flow 8s ease-in-out infinite',
+        'button-float': 'button-float 2s ease-in-out infinite',
       },
     },
   },
