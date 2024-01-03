@@ -4,8 +4,8 @@ import Roadmap from "./Roadmap";
  
 const AboutMe: FunctionComponent = () => {
     return (  
-        <div id="about" className="flex flex-col items-center gap-16 min-h-screen pt-8 w-full relative">
-            <h1 className="text-5xl font-bold">About Me</h1>
+        <div id="about" className="flex flex-col justify-center items-center gap-16 min-h-screen pt-8 w-full relative">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">About Me</h1>
             <div className="grid grid-cols-2 items-center h-[550px]">
                 <div className="flex flex-col gap-8 col-span-2 md:col-span-1 h-full">
                     <div className="flex flex-col gap-2">

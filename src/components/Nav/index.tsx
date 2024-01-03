@@ -2,7 +2,7 @@
 
 import { IconTooltip } from "@/interfaces/icon-tooltip.interface";
 import { Tooltip } from "@nextui-org/react";
-import { Home, Info, FolderDot, Lightbulb } from 'lucide-react';
+import { Home, Info, FolderDot, Lightbulb, Mail } from 'lucide-react';
 import { FunctionComponent } from "react";
 import { Button } from "../ui/button";
 
@@ -33,6 +33,11 @@ const icons: NavTooltip[] = [
         tooltipText: 'Projects',
         id: 'projects'
     },
+    {
+        element: <Mail size={iconSize} />,
+        tooltipText: 'Contact',
+        id: 'contact'
+    }
 ];
 
 interface NavProps {
