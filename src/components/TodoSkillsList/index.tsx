@@ -9,7 +9,7 @@ interface ToDoSkillsListProps {
     
 }
 
-const tabs = ["frontend", "backend", "fullstack"];
+const tabs = ["frontend", "backend", "python", "other"];
  
 const ToDoSkillsList: FunctionComponent<ToDoSkillsListProps> = () => {
     return (  
@@ -19,7 +19,7 @@ const ToDoSkillsList: FunctionComponent<ToDoSkillsListProps> = () => {
                 <p className="text-md text-muted-foreground">I better start learning so I'm done by the end of the day...</p>
             </div>
             <Tabs defaultValue={tabs[0]} className="w-4/5 h-full">
-                <TabsList className="grid w-full grid-cols-3 w-1/3">
+                <TabsList className="grid w-full grid-cols-4 w-2/5">
                     {tabs.map((tab) => {
                         return (
                             <TabsTrigger value={tab}>{tab.charAt(0).toUpperCase() + tab.slice(1)}</TabsTrigger>

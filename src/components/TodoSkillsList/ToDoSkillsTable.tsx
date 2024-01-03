@@ -10,6 +10,10 @@ interface ToDoSkillsTableProps {
 }
  
 const ToDoSkillsTable: FunctionComponent<ToDoSkillsTableProps> = ({skills}) => {
+    const compareByAdvancementLevel = (a: Skill, b: Skill) => {
+        const order = [AdvanceLevel.ADVANCED, AdvanceLevel.INTERMEDIATE, AdvanceLevel.BEGINNER];
+        return order.indexOf(a.advancementLevel) - order.indexOf(b.advancementLevel);
+    }   
     return (  
         <div className="h-full">
             <Table>
@@ -19,11 +23,11 @@ const ToDoSkillsTable: FunctionComponent<ToDoSkillsTableProps> = ({skills}) => {
                         <TableHead className="flex items-center gap-4 w-[100px]">Skill</TableHead>
                         <TableHead>Advancement</TableHead>
                         <TableHead>Description</TableHead>
-                        <TableHead className="text-right">Started learning</TableHead>
+                        <TableHead className="text-right whitespace-nowrap">Started learning</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {skills.map((skill) => (
+                    {skills.sort(compareByAdvancementLevel).map((skill) => (
                     <TableRow key={skill.name}>
                         <TableCell>
                             <Checkbox defaultSelected lineThrough>To learn</Checkbox>
