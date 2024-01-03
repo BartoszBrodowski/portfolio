@@ -42,7 +42,7 @@ export const todoSkills: SkillInField[] = [
                 description: "Started with HTML, came back to it with Angular"
             },
             {
-                name: "Responsive Web Design",
+                name: "RWD",
                 startedLearningDate: "2021-09",
                 advancementLevel: AdvanceLevel.ADVANCED,
                 description: "I think I'm pretty good at it."

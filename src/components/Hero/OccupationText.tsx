@@ -4,8 +4,8 @@ import { TypeAnimation } from "react-type-animation";
  
 const OccupationText = () => {
     return ( 
-        <div className="flex flex-col font-bold text-[24px] leading-8 lg:text-5xl lg:gap-2">
-            <h1 className="text-8xl text-nowrap">Bartosz Brodowski</h1>
+        <div className="flex flex-col font-bold text-[24px] leading-8 lg:text-5xl lg:gap-2 text-center lg:text-justify">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl text-nowrap">Bartosz Brodowski</h1>
             <span className="text-main-green">
                 <TypeAnimation
                     sequence={["Software Engineer 💻", 2000, "CS Student 🎓", 2000]}

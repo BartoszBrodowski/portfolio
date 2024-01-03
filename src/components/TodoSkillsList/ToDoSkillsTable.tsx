@@ -19,10 +19,10 @@ const ToDoSkillsTable: FunctionComponent<ToDoSkillsTableProps> = ({skills}) => {
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[200px]">Status</TableHead>
+                        <TableHead className="w-[150px]">Status</TableHead>
                         <TableHead className="flex items-center gap-4 w-[100px]">Skill</TableHead>
                         <TableHead>Advancement</TableHead>
-                        <TableHead>Description</TableHead>
+                        <TableHead className="hidden lg:block">Description</TableHead>
                         <TableHead className="text-right whitespace-nowrap">Started learning</TableHead>
                     </TableRow>
                 </TableHeader>
@@ -30,7 +30,9 @@ const ToDoSkillsTable: FunctionComponent<ToDoSkillsTableProps> = ({skills}) => {
                     {skills.sort(compareByAdvancementLevel).map((skill) => (
                     <TableRow key={skill.name}>
                         <TableCell>
-                            <Checkbox defaultSelected lineThrough>To learn</Checkbox>
+                            <Checkbox defaultSelected lineThrough>
+                                <h1 className="hidden lg:block">To learn</h1>
+                            </Checkbox>
                         </TableCell>
                         <TableCell className="font-medium">{skill.name}</TableCell>
                         <TableCell className={cn(
@@ -50,7 +52,7 @@ const ToDoSkillsTable: FunctionComponent<ToDoSkillsTableProps> = ({skills}) => {
                                 {skill.advancementLevel}
                             </Chip>
                         </TableCell>
-                        <TableCell>{skill.description}</TableCell>
+                        <TableCell className="hidden lg:block">{skill.description}</TableCell>
                         <TableCell className="text-right">{skill.startedLearningDate}</TableCell>
                     </TableRow>
                     ))}

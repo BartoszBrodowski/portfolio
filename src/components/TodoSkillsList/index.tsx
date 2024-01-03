@@ -18,8 +18,8 @@ const ToDoSkillsList: FunctionComponent<ToDoSkillsListProps> = () => {
                 <h1 className="text-5xl font-bold">Skills</h1>
                 <p className="text-md text-muted-foreground">I better start working so I'm done by the end of the day...</p>
             </div>
-            <Tabs defaultValue={tabs[0]} className="w-4/5 h-full">
-                <TabsList className="grid w-full grid-cols-4 w-2/5">
+            <Tabs defaultValue={tabs[0]} className="w-full lg:w-4/5 h-full">
+                <TabsList className="grid w-full grid-cols-4 lg:w-3/5 xl:w-2/5">
                     {tabs.map((tab) => {
                         return (
                             <TabsTrigger value={tab}>{tab.charAt(0).toUpperCase() + tab.slice(1)}</TabsTrigger>

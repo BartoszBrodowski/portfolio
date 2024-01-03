@@ -11,15 +11,15 @@ const Hero: FunctionComponent = () => {
     return ( 
         <div id="home" className="h-full">
             <ThemeToggle />
-            <div className="flex flex-col justify-center items-start gap-20 min-h-screen lg:mt-0 relative w-full">
+            <div className="flex flex-col justify-center items-center lg:items-start gap-20 min-h-screen lg:mt-0 relative w-full">
                 <OccupationText />
-                <div className="flex items-center gap-40 w-full">
-                    <span className="w-[580px] text-xl">
+                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-40 w-full">
+                    <span className="lg:w-[580px] text-xl text-center lg:text-justify">
                         I'm passionate about <strong>Web Development</strong>. Currently looking for a job, while learning NextJS and Angular with SpringBoot. 
                         <br></br>
                         Based in <strong>Gdańsk, Poland📍</strong>
                     </span>
-                    <div className="flex flex-col gap-4 text-2xl">
+                    <div className="flex flex-col gap-4 text-2xl items-center lg:items-baseline">
                         <div className="flex flex-col gap-2 link dark:after:bg-white">
                             <Link href='https://github.com/BartoszBrodowski' target="_blank" className="flex items-center gap-2"><GithubIcon size={iconSize} />
                                 Github

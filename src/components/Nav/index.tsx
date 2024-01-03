@@ -48,7 +48,7 @@ const Nav: FunctionComponent<NavProps> = () => {
         }
     }
     return (  
-        <div className="fixed left-0 top-1/2 transform -translate-y-1/2 rounded-md p-3">
+        <div className="fixed left-0 top-1/2 transform -translate-y-1/2 rounded-md p-3 hidden lg:block">
             <ul className="flex flex-col gap-4">
                 {icons.map((icon, index) => {
                     return (

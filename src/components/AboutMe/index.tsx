@@ -4,10 +4,10 @@ import Roadmap from "./Roadmap";
  
 const AboutMe: FunctionComponent = () => {
     return (  
-        <div id="about" className="flex flex-col items-center gap-16 min-h-screen pt-8 w-4/5 relative">
+        <div id="about" className="flex flex-col items-center gap-16 min-h-screen pt-8 w-full relative">
             <h1 className="text-5xl font-bold">About Me</h1>
             <div className="grid grid-cols-2 items-center h-[550px]">
-                <div className="flex flex-col gap-8 col-span-1 h-full">
+                <div className="flex flex-col gap-8 col-span-2 md:col-span-1 h-full">
                     <div className="flex flex-col gap-2">
                         <h2 className="font-semibold text-2xl">Who am I?</h2>
                         <p className="text-lg mt-4">I'm a 3rd year Computer Science student at University of Gdańsk keen on learning new things, taking on challenges and open to new friendships.
@@ -18,7 +18,7 @@ const AboutMe: FunctionComponent = () => {
                     </div>
                     <Hobbies />
                 </div>
-                <div className="flex justify-center col-span-1 h-full relative">
+                <div className="flex justify-start ml-16 lg:ml-0 lg:justify-center col-span-1 h-full relative">
                     <Roadmap />
                 </div>
             </div>
