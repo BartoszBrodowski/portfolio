@@ -13,7 +13,7 @@ const tabs = ["frontend", "backend", "python", "other"];
  
 const ToDoSkillsList: FunctionComponent<ToDoSkillsListProps> = () => {
     return (  
-        <div id="skills" className="flex flex-col justify-center items-center gap-8 w-full min-h-screen pt-8">
+        <div id="skills" className="flex flex-col justify-center items-center gap-8 w-full min-h-screen">
             <div className="flex flex-col text-center gap-2">
                 <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">Skills</h1>
                 <p className="sm:text-sm md:text-md lg:text-lg text-muted-foreground">I better start working so I'm done by the end of the day...</p>
