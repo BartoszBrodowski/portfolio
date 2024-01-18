@@ -21,7 +21,7 @@ const ProjectContent: FunctionComponent<ProjectContentProps> = ({ project }) => 
     return ( 
         <div className="flex flex-col h-full w-full">
                 <ProjectContentHeader />
-                <Separator />
+                <Separator className="hidden lg:block" />
                 {project.name ? 
                     (<>
                         <ScrollArea className="h-[530px]">
@@ -43,8 +43,8 @@ const ProjectContent: FunctionComponent<ProjectContentProps> = ({ project }) => 
                     : 
                     (
                         <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
-                            <h1 className="text-2xl font-semibold">No project selected</h1>
-                            <h2 className="text-lg">Select a project to display its content</h2>
+                            <h1 className="text-xl lg:text-2xl font-semibold">No project selected</h1>
+                            <h2 className="text-md lg:text-lg px-4 text-center">Select a project to display its content</h2>
                         </div>
                     )
                 }

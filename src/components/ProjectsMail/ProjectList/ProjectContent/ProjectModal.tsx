@@ -11,7 +11,7 @@ interface ProjectModalProps {
  
 const ProjectModal: FunctionComponent<ProjectModalProps> = ({project, isOpen, onOpenChange, onClose}) => {
     return (  
-        <Modal className="p-4" backdrop="blur" size="2xl" isOpen={isOpen} onOpenChange={onOpenChange}>
+        <Modal className="p-1 lg:p-4" backdrop="blur" size="2xl" placement="center" isOpen={isOpen} onOpenChange={onOpenChange}>
             <ModalContent>
             {(onClose) => (
                 <>

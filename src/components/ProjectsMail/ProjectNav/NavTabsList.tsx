@@ -30,7 +30,7 @@ const NavTabsList: FunctionComponent<NavTabsListProps> = ({setProjects}) => {
                     )
                 })}
             </ul>
-            <Separator />
+            <Separator className="hidden lg:block" />
             <ul className="flex flex-col gap-1 m-2 md:m-4">
                 {otherNavTabs.map((tab, index) => {
                     return (

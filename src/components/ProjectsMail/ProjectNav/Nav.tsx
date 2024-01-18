@@ -14,7 +14,7 @@ interface NavProps {
 
 const Nav: FunctionComponent<NavProps> = ({currentFilterField, setProjects, changeFilterField}) => {
     return (  
-        <div className="w-full sm:max-w-[200px] lg:max-w-[250px] my-0">
+        <div className="xl:w-full lg:max-w-[250px] sm:max-w-[200px] my-0 hidden lg:block">
             <nav>
                 <ProfileTab currentField={currentFilterField} changeFilterField={changeFilterField} />
                 <Separator orientation="horizontal" className="mb-2" />

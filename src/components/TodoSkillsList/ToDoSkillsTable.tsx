@@ -27,8 +27,8 @@ const ToDoSkillsTable: FunctionComponent<ToDoSkillsTableProps> = ({skills}) => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {skills.sort(compareByAdvancementLevel).map((skill) => (
-                    <TableRow key={skill.name}>
+                    {skills.sort(compareByAdvancementLevel).map((skill, index) => (
+                    <TableRow key={index}>
                         <TableCell>
                             <Checkbox defaultSelected lineThrough>
                                 <h1 className="hidden lg:block">To learn</h1>

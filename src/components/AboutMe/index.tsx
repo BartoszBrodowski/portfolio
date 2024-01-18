@@ -10,10 +10,10 @@ const AboutMe: FunctionComponent = () => {
                 <div className="flex flex-col gap-8 col-span-2 md:col-span-1 h-full">
                     <div className="flex flex-col gap-2">
                         <h2 className="font-semibold text-2xl">Who am I?</h2>
-                        <p className="text-lg mt-4">I'm a 3rd year Computer Science student at University of Gdańsk keen on learning new things, taking on challenges and open to new friendships.
+                        <p className="text-lg mt-1">I'm a <strong>3rd year Computer Science student</strong> at University of Gdańsk keen on learning new things, taking on challenges and open to new friendships.
                         </p>
-                        <p className="text-lg mt-4">
-                            My best quality is organisation and being able to manage my time. I think that planning ahead is the key to success.
+                        <p className="text-lg mt-1">
+                            My best quality is <strong>being organised</strong> and able to <strong>manage my time</strong>. I think that planning ahead is the key to success.
                         </p>
                     </div>
                     <Hobbies />

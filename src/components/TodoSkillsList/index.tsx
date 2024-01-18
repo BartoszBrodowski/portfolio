@@ -20,15 +20,15 @@ const ToDoSkillsList: FunctionComponent<ToDoSkillsListProps> = () => {
             </div>
             <Tabs defaultValue={tabs[0]} className="w-full lg:w-4/5 h-full">
                 <TabsList className="grid w-full grid-cols-4 lg:w-3/5 xl:w-2/5">
-                    {tabs.map((tab) => {
+                    {tabs.map((tab, index) => {
                         return (
-                            <TabsTrigger value={tab}>{tab.charAt(0).toUpperCase() + tab.slice(1)}</TabsTrigger>
+                            <TabsTrigger key={index} value={tab}>{tab.charAt(0).toUpperCase() + tab.slice(1)}</TabsTrigger>
                         )
                     })}
                 </TabsList>
-                {todoSkills.map((field) => {
+                {todoSkills.map((field, index) => {
                     return (
-                        <TabsContent value={field.name} className="w-full h-full">
+                        <TabsContent key={index} value={field.name} className="w-full h-full">
                             <ToDoSkillsTable skills={field.skills} />
                         </TabsContent>
                     )

@@ -5,17 +5,23 @@ import { Badge } from "../../ui/badge";
 import { formatDistanceToNow } from "date-fns";
 import { Dot, Github } from "lucide-react";
 import Link from "next/link";
+import ProjectModal from "./ProjectContent/ProjectModal";
+import { useDisclosure } from "@nextui-org/react";
 
 interface ProjectCardProps {
     project: Project;
-    index: number;
     changeProject: (project: Project) => void;
 }
  
-const ProjectCard: FunctionComponent<ProjectCardProps> = ({project, index, changeProject}) => {
+const ProjectCard: FunctionComponent<ProjectCardProps> = ({project, changeProject}) => {
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
+    const showProject = (): void => {
+        changeProject(project);
+        onOpen();
+    }
     return (  
         <Card className="hover:bg-accent hover:cursor-pointer transition-all"
-        onClick={() => changeProject(project)}
+        onClick={() => showProject()}
         >
             <CardHeader className="p-4 pb-2">
                 <div className="flex justify-between items-center">
@@ -33,6 +39,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({project, index, chang
                     <Github size={12} />
                     <Link href={project.github} target="#" className="hover:text-main-green transition-all transform-150 w-full">{project.github}</Link>
                 </p>
+                <ProjectModal project={project} isOpen={isOpen} onOpenChange={onOpenChange} onClose={onOpenChange} />
                 <p className="text-muted-foreground">{project.shortDescription.substring(0, 300)}</p>
             </CardContent>
             <CardFooter className="mt-2 p-4 pt-2">

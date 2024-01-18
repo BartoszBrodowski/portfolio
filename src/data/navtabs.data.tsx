@@ -1,5 +1,6 @@
 import GuitarShop from "@/components/ProjectsMail/ModalDisplays/GuitarShop";
 import { NavTabInfo } from "@/interfaces/navtab.interface";
+import { Project } from "@/interfaces/project.interface";
 import { File, Inbox, Trash2, Archive, UsersRound, Bell, MessagesSquare, Tag, AlertCircle } from "lucide-react";
 
 const iconSize = 20
@@ -31,7 +32,7 @@ const mainNavTabs: NavTabInfo[] = [
         isActive: true
     },
     {
-        name: "Drafts (in progress)",
+        name: "In Progress",
         icon: <File size={iconSize} />,
         projects: [
             {
@@ -86,4 +87,22 @@ const otherNavTabs: NavTabInfo[] = [
 
 ]
 
-export { mainNavTabs, otherNavTabs }
+function getAllProjects() {
+    const allProjects: Project[] = [];
+    const projectNamesSet = new Set();
+  
+    mainNavTabs.forEach(tab => {
+        if (tab.projects && tab.projects.length > 0) {
+          tab.projects.forEach(project => {
+            if (!projectNamesSet.has(project.name)) {
+              projectNamesSet.add(project.name);
+              allProjects.push(project);
+            }
+          });
+        }
+      });
+  
+    return allProjects;
+  }
+
+export { mainNavTabs, otherNavTabs, getAllProjects }

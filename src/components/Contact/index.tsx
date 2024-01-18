@@ -21,9 +21,7 @@ const Contact: FunctionComponent<ContactProps> = () => {
                 <div className="flex flex-col gap-2 w-full items-start">
                     <div className="flex items-center justify-center gap-1 text-center w-full">
                         <Mailbox className="w-8 h-8 lg:w-12 lg:h-12 p-1" />
-                        <Snippet className="border-none text-md lg:text-xl px-0" hideSymbol copyIcon={<Copy />} checkIcon={<CheckCheck />} copyButtonProps={{ className: "copy-to-clipboard-button" }} variant="bordered">
-                            <span>bar.brodowski@gmail.com</span>
-                        </Snippet>
+                        <a className="text-2xl font-mono" href="mailto:bar.brodowski@gmail.com">bar.brodowski@gmail.com</a>
                     </div>
                     
                 </div>
