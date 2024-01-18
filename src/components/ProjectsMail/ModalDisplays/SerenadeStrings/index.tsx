@@ -1,23 +1,22 @@
 import { FunctionComponent } from 'react';
 import ModalCard from '../ModalCard';
 import ModalContent from '../ModalContent';
+import ModalGithubLink from '../ModalGithubLink';
 import ModalHeader from '../ModalHeader';
 import Content from './Content';
 import ModalTechnologies from '../ModalTechnologies';
-import ReduxIcon from '@/icons/ReduxIcon';
+import NextIcon from '@/icons/NextIcon';
 import { IconTooltip } from '@/interfaces/icon-tooltip.interface';
 import TailwindIcon from '@/icons/TailwindIcon';
-import ReactIcon from '@/icons/ReactIcon';
-
-interface GuitarShopProps {
-	github: string;
-}
+import PrismaIcon from '@/icons/Prisma';
+import PostgreSQLIcon from '@/icons/PostgreSQL';
+import TRPCIcon from '@/icons/TRPCIcon';
 
 const iconSize = 32;
 
 const icons: IconTooltip[] = [
 	{
-		element: <ReduxIcon size={iconSize} />,
+		element: <NextIcon size={iconSize} />,
 		tooltipText: 'Redux',
 	},
 	{
@@ -25,21 +24,26 @@ const icons: IconTooltip[] = [
 		tooltipText: 'TailwindCSS',
 	},
 	{
-		element: <ReactIcon size={iconSize} />,
+		element: <PostgreSQLIcon size={iconSize} />,
+		tooltipText: 'Prisma',
+	},
+	{
+		element: <PrismaIcon size={iconSize} />,
 		tooltipText: 'React',
 	},
 ];
 
-const GuitarShop: FunctionComponent<GuitarShopProps> = ({ github }) => {
+const SerenadeStrings: FunctionComponent<ContentProps> = ({ github }) => {
 	return (
-		<ModalCard>
-			<ModalHeader>🎸 Guitar shop</ModalHeader>
+		<ModalCard className='flex flex-col gap-6'>
+			<ModalHeader>🎵 Serenade Strings</ModalHeader>
 			<ModalContent>
 				<ModalTechnologies icons={icons} />
-				<Content github={github} />
+				<Content />
+				<ModalGithubLink github={github} />
 			</ModalContent>
 		</ModalCard>
 	);
 };
 
-export default GuitarShop;
+export default SerenadeStrings;
