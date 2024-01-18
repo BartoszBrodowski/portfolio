@@ -11,13 +11,16 @@ import { useDisclosure } from "@nextui-org/react";
 interface ProjectCardProps {
     project: Project;
     changeProject: (project: Project) => void;
+    mobile: boolean;
 }
  
-const ProjectCard: FunctionComponent<ProjectCardProps> = ({project, changeProject}) => {
+const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project, changeProject, mobile }) => {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const showProject = (): void => {
         changeProject(project);
-        onOpen();
+        if (mobile) {
+            onOpen();
+        }
     }
     return (  
         <Card className="hover:bg-accent hover:cursor-pointer transition-all"

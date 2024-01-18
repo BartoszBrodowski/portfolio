@@ -1,13 +1,11 @@
-import { Project } from "@/interfaces/project.interface";
-import { FunctionComponent, useState } from "react";
-import ProjectCard from "./ProjectCard";
-import { Separator } from "../../ui/separator";
-import { ScrollArea } from "../../ui/scroll-area";
-import { Input } from "../../ui/input";
-import { Search } from "lucide-react";
 import { getAllProjects } from "@/data/navtabs.data";
-import { useDisclosure } from "@nextui-org/react";
-import ProjectModal from "./ProjectContent/ProjectModal";
+import { Project } from "@/interfaces/project.interface";
+import { Search } from "lucide-react";
+import { FunctionComponent, useState } from "react";
+import { Input } from "../../ui/input";
+import { ScrollArea } from "../../ui/scroll-area";
+import { Separator } from "../../ui/separator";
+import ProjectCard from "./ProjectCard";
 
 interface ProjectsListProps {
     projects: Project[];
@@ -17,7 +15,6 @@ interface ProjectsListProps {
  
 const ProjectsList: FunctionComponent<ProjectsListProps> = ({projects, setClickedProject, setSearchFilter}) => {
     const [searchValue, setSearchValue] = useState<string>("");
-    const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     const changeProject = (project: Project): void => {
         setClickedProject(project);
@@ -30,9 +27,7 @@ const ProjectsList: FunctionComponent<ProjectsListProps> = ({projects, setClicke
 
     const filteredProjects = projects.filter(project => project.name.toLowerCase().includes(searchValue.toLowerCase()));
 
-    const showProjectModal = (): void => {
-        
-    }
+    const allProjects = getAllProjects();
 
     return (  
         <div className="flex h-full">
@@ -50,20 +45,20 @@ const ProjectsList: FunctionComponent<ProjectsListProps> = ({projects, setClicke
                                 key={index}
                                 project={project}
                                 changeProject={changeProject}
+                                mobile={false}
                                 />
                             )
                         })}
                     </div>
                     <div className="block lg:hidden flex flex-col gap-2 p-4 pt-0">
-                        {getAllProjects().map((project, index) => {
+                        {allProjects.map((project, index) => {
                             return (
-                                <>
-                                    <ProjectCard 
-                                    key={index}
-                                    project={project}
-                                    changeProject={changeProject}
-                                    />
-                                </>
+                                <ProjectCard 
+                                key={index}
+                                project={project}
+                                changeProject={changeProject}
+                                mobile
+                                />
                             )
                         })}
                     </div>
