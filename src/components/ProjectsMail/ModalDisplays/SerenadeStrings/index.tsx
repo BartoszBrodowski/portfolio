@@ -8,9 +8,8 @@ import ModalTechnologies from '../ModalTechnologies';
 import NextIcon from '@/icons/NextIcon';
 import { IconTooltip } from '@/interfaces/icon-tooltip.interface';
 import TailwindIcon from '@/icons/TailwindIcon';
-import PrismaIcon from '@/icons/Prisma';
+import PrismaIcon from '@/icons/PrismaIcon';
 import PostgreSQLIcon from '@/icons/PostgreSQL';
-import TRPCIcon from '@/icons/TRPCIcon';
 
 const iconSize = 32;
 

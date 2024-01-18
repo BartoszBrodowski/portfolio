@@ -1,5 +1,5 @@
 import NextIcon from '@/icons/NextIcon';
-import PrismaIcon from '@/icons/Prisma';
+import PrismaIcon from '@/icons/PrismaIcon';
 import TailwindIcon from '@/icons/TailwindIcon';
 import { IconTooltip } from '@/interfaces/icon-tooltip.interface';
 import { Tooltip } from '@nextui-org/react';
