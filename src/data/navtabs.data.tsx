@@ -1,6 +1,7 @@
 import GuitarShop from '@/components/ProjectsMail/ModalDisplays/GuitarShop';
 import MacroMaster from '@/components/ProjectsMail/ModalDisplays/MacroMaster';
 import SerenadeStrings from '@/components/ProjectsMail/ModalDisplays/SerenadeStrings';
+import WineExchange from '@/components/ProjectsMail/ModalDisplays/WineExchange';
 import { NavTabInfo } from '@/interfaces/navtab.interface';
 import { Project } from '@/interfaces/project.interface';
 import {
@@ -66,6 +67,16 @@ const mainNavTabs: NavTabInfo[] = [
 				field: 'Fullstack',
 				preview: 'https://macro-master-app.vercel.app/',
 				modalComponent: <MacroMaster github='https://github.com/macromaster-app/web-app' />,
+			},
+			{
+				name: 'WineExchange',
+				date: '2024-01-24',
+				shortDescription:
+					"🍷 WineExchange is waiting to help you with your wine collection. \n\nWineExchange is an online winery that offers best products to expand your wine collection! We're currently offering a 10% off on all of our products! If you're of age and want to try something new, we're the perfect place to start your search for the best wines.  \n\n Get going with improving your wine collection today!",
+				technologies: ['Angular', 'Spring Boot', 'PrimeNG', 'Primeflex', 'Lombok', 'JPA', 'MVC'],
+				github: 'https://github.com/BartoszBrodowski/wine-exchange',
+				field: 'Fullstack',
+				modalComponent: <WineExchange github='https://github.com/BartoszBrodowski/wine-exchange' />,
 			},
 		],
 		isActive: true,
