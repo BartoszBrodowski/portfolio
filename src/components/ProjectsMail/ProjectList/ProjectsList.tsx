@@ -8,12 +8,14 @@ import { Separator } from '../../ui/separator';
 import ProjectCard from './ProjectCard';
 
 interface ProjectsListProps {
+	clickedProject: Project;
 	projects: Project[];
 	setClickedProject: (project: Project) => void;
 	setSearchFilter: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const ProjectsList: FunctionComponent<ProjectsListProps> = ({
+	clickedProject,
 	projects,
 	setClickedProject,
 	setSearchFilter,
@@ -51,6 +53,7 @@ const ProjectsList: FunctionComponent<ProjectsListProps> = ({
 				<ScrollArea className='h-[550px]'>
 					<div className='hidden lg:block flex flex-col gap-2 p-4 pt-0 mb-16'>
 						{filteredProjects.map((project, index) => {
+							const isClicked = project === clickedProject;
 							return (
 								<ProjectCard
 									className='mb-4'
@@ -58,6 +61,7 @@ const ProjectsList: FunctionComponent<ProjectsListProps> = ({
 									project={project}
 									changeProject={changeProject}
 									mobile={false}
+									isClicked={isClicked}
 								/>
 							);
 						})}

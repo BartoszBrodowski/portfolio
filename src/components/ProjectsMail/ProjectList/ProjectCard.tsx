@@ -7,12 +7,14 @@ import { FunctionComponent } from 'react';
 import { Badge } from '../../ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '../../ui/card';
 import ProjectModal from './ProjectContent/ProjectModal';
+import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
 	project: Project;
 	changeProject: (project: Project) => void;
 	mobile: boolean;
 	className?: string;
+	isClicked?: boolean;
 }
 
 const ProjectCard: FunctionComponent<ProjectCardProps> = ({
@@ -20,6 +22,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
 	changeProject,
 	mobile,
 	className,
+	isClicked,
 }) => {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
 	const showProject = (): void => {
@@ -30,7 +33,9 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
 	};
 	return (
 		<Card
-			className={'hover:bg-accent hover:cursor-pointer transition-all ' + className}
+			className={cn('hover:bg-accent hover:cursor-pointer transition-all', className, {
+				'bg-accent': isClicked,
+			})}
 			onClick={() => showProject()}>
 			<CardHeader className='p-4 pb-2'>
 				<div className='flex justify-between items-center'>
@@ -49,7 +54,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
 					<Link
 						href={project.github}
 						target='#'
-						className='hover:text-main-green transition-all transform-150 w-fit'>
+						className='hover:text-main-green transition-all transform-150 w-fit underline'>
 						{project.github}
 					</Link>
 				</p>
