@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Hero: FunctionComponent = () => {
 	return (
-		<div id='home' className='h-full'>
+		<div id='home' className='h-full min-h-screen'>
 			<ThemeToggle />
 			<div className='flex flex-col justify-center items-center lg:items-start gap-20 min-h-screen lg:mt-0 relative w-full'>
 				<OccupationText />
