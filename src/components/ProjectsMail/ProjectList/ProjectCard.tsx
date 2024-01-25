@@ -40,16 +40,16 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
 			<CardHeader className='p-4 pb-2'>
 				<div className='flex justify-between items-center'>
 					<h2 className='text-sm font-semibold'>{project.name}</h2>
-					<span className='flex items-center gap-2 text-xs'>
+					<div className='flex items-center gap-2 text-xs'>
 						{formatDistanceToNow(new Date(project.date), {
 							addSuffix: true,
 						})}
 						<span className='flex h-2 w-2 rounded-full bg-main-green' />
-					</span>
+					</div>
 				</div>
 			</CardHeader>
 			<CardContent className='text-xs line-clamp-3 py-1 px-4'>
-				<p className='flex items-center gap-2 mb-2'>
+				<div className='flex items-center gap-2 mb-2'>
 					<Github size={12} />
 					<Link
 						href={project.github}
@@ -57,7 +57,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
 						className='hover:text-main-green transition-all transform-150 w-fit underline'>
 						{project.github}
 					</Link>
-				</p>
+				</div>
 				<ProjectModal
 					project={project}
 					isOpen={isOpen}
