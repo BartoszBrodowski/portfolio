@@ -20,8 +20,8 @@ const Content = () => {
 
 				<h2 className='font-semibold text-2xl'>🎓 What have I learned?</h2>
 				<p className='ml-4'>
-					My main focus was to manage fetching the data effectively and efficiently while doing as
-					much as using <span className='font-semibold'>Server Side Rendering</span>.
+					My main focus was to manage fetching the data effectively and efficiently while utilizing{' '}
+					<span className='font-semibold'>Server Side Rendering</span> as much as I could.
 				</p>
 				<p className='text-lg font-semibold'>Things I learned/improved on:</p>
 				<ul className='ml-4'>

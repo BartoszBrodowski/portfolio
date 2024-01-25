@@ -15,7 +15,6 @@ const ProjectMail: FunctionComponent<ProjectMailProps> = () => {
 
 	const changeProjects = (projects: Project[]) => {
 		setCurrentProjects(projects);
-		console.log(projects);
 	};
 
 	const changeProjectIndex = (project: Project) => {

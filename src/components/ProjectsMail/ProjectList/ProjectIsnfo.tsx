@@ -34,7 +34,7 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({
 	});
 	return (
 		<ResizablePanelGroup direction='horizontal' className='min-h-[400px] w-full'>
-			<ResizablePanel minSize={30}>
+			<ResizablePanel minSize={30} defaultSize={50}>
 				<div className='flex h-[68px]'>
 					<Separator orientation='vertical' className='hidden lg:block' />
 					<h1 className='flex items-center font-bold text-xl p-4'>Projects</h1>
@@ -48,7 +48,7 @@ const ProjectsInfo: FunctionComponent<ProjectsInfoProps> = ({
 				/>
 			</ResizablePanel>
 			<ResizableHandle withHandle />
-			<ResizablePanel minSize={40} className='hidden md:block'>
+			<ResizablePanel minSize={40} defaultSize={50} className='hidden md:block'>
 				<div className='flex h-full items-start justify-center'>
 					<ProjectContent project={project} />
 				</div>
