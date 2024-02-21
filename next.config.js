@@ -27,6 +27,7 @@ const nextConfig = {
     
         return config
     },
+    basePath: '/portfolio'
 }
 
 module.exports = nextConfig
